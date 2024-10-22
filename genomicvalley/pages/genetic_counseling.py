@@ -42,11 +42,11 @@ def genetic_counseling():
                         size="9",
                         color="teal",
                         font_weight="bold",
-                        margin_bottom="5",
                         text_align="center"  # Centering the text
                     ),
                     width="100%",
                     display="flex",
+                    margin_bottom="2",
                     justify_content="center"  # Centering the section
                 ),
                 rx.flex(
@@ -57,7 +57,7 @@ def genetic_counseling():
                                     rx.image(
                                         src="/uzma.jpeg",
                                         alt="Dr. Uzma Shamim",
-                                        width="400px",
+                                        width="300px",
                                         border_radius="10%",
                                         margin_right="3"
                                     ),
@@ -379,13 +379,11 @@ def genetic_counseling():
                                 justify_content="center"  
                             ),
                         ),
-                        width="60vw",
+                        width="70vw",
                         p="4",
-                        padding="3rem",
                     ),
                     width="100%",
                     justify="center",
-                    padding="3rem",
                 ),
                 footer(),
             ),
@@ -413,22 +411,30 @@ def genetic_counseling():
                                     color="teal",
                                     font_weight="bold",
                                     margin_bottom="0.5rem",
+                                    text_align="center"  # Centering the text
                                 ),
                                 rx.text(
                                     "Geneticist/Consultant/Genetic Counselor",
                                     font_size="1rem",
                                     color="gray",
                                     margin_bottom="0.5rem",
+                                    text_align="center"  # Centering the text
                                 ),
                                 rx.link(
-                                            rx.button(
-                                                "Book Now",
-                                                size="3",
-                                                variant="solid",
-                                                color_scheme="teal",
-                                            ),
-                                            href="https://pages.razorpay.com/genetic-counseling",
-                                        ),
+                                    rx.button(
+                                        "Book Now",
+                                        size="3",
+                                        variant="solid",
+                                        color_scheme="teal",
+                                    ),
+                                    href="https://pages.razorpay.com/genetic-counseling",
+                                    text_align="center"  # Centering the link
+                                ),
+                                display="flex",           # Use flex display
+                                flex_direction="column",  # Stack elements vertically
+                                align_items="center",     # Center items horizontally
+                                justify_content="center", # Center items vertically
+                                text_align="center"       # Ensure text is centered
                             ),
                             direction="column",
                             align="center",
