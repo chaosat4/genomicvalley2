@@ -3,8 +3,8 @@ import reflex as rx
 config = rx.Config(
     app_name="genomicvalley",
     db_url="sqlite:///reflex.db",
-    frontend_port=52305,
-    backend_port=52805,
+    frontend_port=3000,
+    backend_port=8000,
     cors_allowed_origins=["*"],
 )
 
