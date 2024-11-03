@@ -40,7 +40,8 @@ from .pages import (
     whole_exome,
     whole_genome,
     genetic_counseling,
-    faq
+    faq,
+    plant_genome
 )
 
 __all__ = [
@@ -85,5 +86,6 @@ __all__ = [
     "whole_exome",
     "whole_genome",
     "genetic_counseling",
-    "faq"
+    "faq",
+    "plant_genome"
 ]
