@@ -10,4 +10,4 @@ config = rx.Config(
 
 
 # Create your app instance with this config
-app = rx.App(config=config)
+app = rx.App()
