@@ -72,6 +72,7 @@ def navbar_white() -> rx.Component:
                 rx.hstack(
                     navbar_link("Home", "/"),
                     navbar_link("About Us", "/about"),
+                    navbar_link("Investors", "/investor"),
                     navbar_link("Careers", "/career"),
                     navbar_link("Genetic Counseling", "/genetic-counseling"),
                     navbar_link("Plant Genomics", "/plant-genome"),
@@ -352,6 +353,7 @@ def navbar_white() -> rx.Component:
                         rx.menu.item("Home", on_click=lambda: redirect("/")),
                         rx.menu.item("About Us", on_click=lambda: redirect("/about")),
                         rx.menu.item("Collaborations", on_click=lambda: redirect("/collaborations")),
+                        rx.menu.item("Investors", on_click=lambda: redirect("/investor")),
                         rx.menu.item("Careers", on_click=lambda: redirect("/career")),
                         rx.menu.item("Genetic Counseling", on_click=lambda: redirect("/genetic-counseling")),
                         rx.menu.item("Plant Genomics", on_click=lambda: redirect("/plant-genome")),
