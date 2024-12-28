@@ -65,7 +65,7 @@ def investor():
                                             style=table_header_style,
                                         ),
                                         rx.table.column_header_cell(
-                                            "Annual Report",
+                                            "Document",
                                             style=table_header_style,
                                         ),
                                         rx.table.column_header_cell(
@@ -127,7 +127,7 @@ def investor():
                                         style=table_header_style,
                                     ),
                                     rx.table.column_header_cell(
-                                        "Annual Report",
+                                        "Document",
                                         style=table_header_style,
                                     ),
                                     rx.table.column_header_cell(
