@@ -4,8 +4,18 @@ FROM python:3.11-slim
 # Set working directory in the container
 WORKDIR /app
 
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
 # Install system dependencies
 RUN apt-get update && apt-get install -y unzip && rm -rf /var/lib/apt/lists/*
+
+
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install -y nodejs \
+    && rm -rf /var/lib/apt/lists/*
 
 # Copy the requirements file first to leverage Docker cache
 COPY requirements.txt .
