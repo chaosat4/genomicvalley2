@@ -12,10 +12,16 @@ RUN apt-get update && apt-get install -y \
 # Install system dependencies
 RUN apt-get update && apt-get install -y unzip && rm -rf /var/lib/apt/lists/*
 
-
+# Install Node.js
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
     && apt-get install -y nodejs \
     && rm -rf /var/lib/apt/lists/*
+
+# Install Bun
+RUN curl -fsSL https://bun.sh/install | bash
+
+# Add Bun to PATH
+ENV PATH="/root/.bun/bin:${PATH}"
 
 # Copy the requirements file first to leverage Docker cache
 COPY requirements.txt .
