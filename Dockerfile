@@ -4,6 +4,9 @@ FROM python:3.11-slim
 # Set working directory in the container
 WORKDIR /app
 
+# Install system dependencies
+RUN apt-get update && apt-get install -y unzip && rm -rf /var/lib/apt/lists/*
+
 # Copy the requirements file first to leverage Docker cache
 COPY requirements.txt .
 
