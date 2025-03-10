@@ -1,5 +1,5 @@
 import reflex as rx
-
+import genomicvalley.components.floating_card as floating_card
 
     
 
@@ -73,9 +73,7 @@ divier_style = {
 
 def footer() -> rx.Component:
     return rx.section(
-        rx.html("""
-                <script id="messenger-widget-b" src="https://cdn.botpenguin.com/website-bot.js" defer>66e98b64919797409c2bd1c6,66e98b3e552c6a80a286ff98</script>
-                """),
+        floating_card.floating_card(),
         rx.desktop_only(
                         rx.el.footer(
                 rx.vstack(
