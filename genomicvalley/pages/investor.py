@@ -81,13 +81,25 @@ def investor():
                                 rx.table.body(
                                     rx.table.row(
                                         rx.table.cell("1", style=table_cell_style),
+                                        rx.table.cell("Audited Financial 31st March 2025", style=table_cell_style),
+                                        rx.table.cell("2024-25", style=table_cell_style),
+                                        rx.table.cell(
+                                            rx.button(
+                                                "Download",
+                                                style=download_button_style,
+                                                on_click=rx.download(url="/obm.pdf"),
+                                            )
+                                        ),
+                                    ),
+                                    rx.table.row(
+                                        rx.table.cell("2", style=table_cell_style),
                                         rx.table.cell("Annual Report", style=table_cell_style),
                                         rx.table.cell("2023-24", style=table_cell_style),
                                         rx.table.cell(
                                             rx.button(
                                                 "Download",
                                                 style=download_button_style,
-                                                on_click=rx.download(url="/Final Final GVBL Annual Report 2023-24.pdf"),
+                                                on_click=rx.download(url="/ar.pdf"),
                                             )
                                         ),
                                     ),
@@ -143,13 +155,25 @@ def investor():
                             rx.table.body(
                                 rx.table.row(
                                     rx.table.cell("1", style=table_cell_style),
+                                    rx.table.cell("Audited Financial 31st March 2025", style=table_cell_style),
+                                    rx.table.cell("2024-25", style=table_cell_style),
+                                    rx.table.cell(
+                                        rx.button(
+                                            "Download",
+                                            style=download_button_style,
+                                            on_click=rx.download(url="/obm.pdf"),
+                                        )
+                                    ),
+                                ),
+                                rx.table.row(
+                                    rx.table.cell("2", style=table_cell_style),
                                     rx.table.cell("Annual Report", style=table_cell_style),
                                     rx.table.cell("2023-24", style=table_cell_style),
                                     rx.table.cell(
                                         rx.button(
                                             "Download",
                                             style=download_button_style,
-                                            on_click=rx.download(url="/Final Final GVBL Annual Report 2023-24.pdf"),
+                                            on_click=rx.download(url="/ar.pdf"),
                                         )
                                     ),
                                 ),
