@@ -81,6 +81,18 @@ def investor():
                                 rx.table.body(
                                     rx.table.row(
                                         rx.table.cell("1", style=table_cell_style),
+                                        rx.table.cell("Q1 Board meeting AY 2025-2026", style=table_cell_style),
+                                        rx.table.cell("2025-26", style=table_cell_style),
+                                        rx.table.cell(
+                                            rx.button(
+                                                "Download",
+                                                style=download_button_style,
+                                                on_click=rx.download(url="/bmo.pdf"),
+                                            )
+                                        ),
+                                    ),
+                                    rx.table.row(
+                                        rx.table.cell("2", style=table_cell_style),
                                         rx.table.cell("Audited Financial 31st March 2025", style=table_cell_style),
                                         rx.table.cell("2024-25", style=table_cell_style),
                                         rx.table.cell(
@@ -92,7 +104,7 @@ def investor():
                                         ),
                                     ),
                                     rx.table.row(
-                                        rx.table.cell("2", style=table_cell_style),
+                                        rx.table.cell("3", style=table_cell_style),
                                         rx.table.cell("Annual Report", style=table_cell_style),
                                         rx.table.cell("2023-24", style=table_cell_style),
                                         rx.table.cell(
@@ -155,6 +167,18 @@ def investor():
                             rx.table.body(
                                 rx.table.row(
                                     rx.table.cell("1", style=table_cell_style),
+                                    rx.table.cell("Q1 Board meeting AY 2025-2026", style=table_cell_style),
+                                    rx.table.cell("2025-26", style=table_cell_style),
+                                    rx.table.cell(
+                                        rx.button(
+                                            "Download",
+                                            style=download_button_style,
+                                            on_click=rx.download(url="/bmo.pdf"),
+                                        )
+                                    ),
+                                ),
+                                rx.table.row(
+                                    rx.table.cell("2", style=table_cell_style),
                                     rx.table.cell("Audited Financial 31st March 2025", style=table_cell_style),
                                     rx.table.cell("2024-25", style=table_cell_style),
                                     rx.table.cell(
@@ -166,7 +190,7 @@ def investor():
                                     ),
                                 ),
                                 rx.table.row(
-                                    rx.table.cell("2", style=table_cell_style),
+                                    rx.table.cell("3", style=table_cell_style),
                                     rx.table.cell("Annual Report", style=table_cell_style),
                                     rx.table.cell("2023-24", style=table_cell_style),
                                     rx.table.cell(
