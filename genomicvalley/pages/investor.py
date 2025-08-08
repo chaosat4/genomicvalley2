@@ -53,71 +53,126 @@ def investor():
                     rx.box(
                         rx.vstack(
                             rx.text(
-                                "Welcome to our Investor Relations page. Here you can find our annual reports and financial documents.",
+                                "Welcome to our Investor Relations page. Here you can find our annual reports and financial documents organized by fiscal year.",
                                 style=paragraph_style,
                                 margin_bottom="2rem",
                             ),
-                            rx.table.root(
-                                rx.table.header(
-                                    rx.table.row(
-                                        rx.table.column_header_cell(
-                                            "S.No",
-                                            style=table_header_style,
-                                        ),
-                                        rx.table.column_header_cell(
-                                            "Document",
-                                            style=table_header_style,
-                                        ),
-                                        rx.table.column_header_cell(
-                                            "Fiscal Year",
-                                            style=table_header_style,
-                                        ),
-                                        rx.table.column_header_cell(
-                                            "Download",
-                                            style=table_header_style,
-                                        ),
-                                    ),
+                            rx.tabs.root(
+                                rx.tabs.list(
+                                    rx.tabs.trigger(rx.text("FY 2025-26", color="teal"), value="fy2025"),
+                                    rx.tabs.trigger(rx.text("FY 2024-25", color="teal"), value="fy2024"),
+                                    rx.tabs.trigger(rx.text("FY 2023-24", color="teal"), value="fy2023"),
                                 ),
-                                rx.table.body(
-                                    rx.table.row(
-                                        rx.table.cell("1", style=table_cell_style),
-                                        rx.table.cell("Q1 Board meeting AY 2025-2026", style=table_cell_style),
-                                        rx.table.cell("2025-26", style=table_cell_style),
-                                        rx.table.cell(
-                                            rx.button(
-                                                "Download",
-                                                style=download_button_style,
-                                                on_click=rx.download(url="/bmo.pdf"),
-                                            )
+                                rx.tabs.content(
+                                    rx.table.root(
+                                        rx.table.header(
+                                            rx.table.row(
+                                                rx.table.column_header_cell(
+                                                    "S.No.",
+                                                    style=table_header_style,
+                                                ),
+                                                rx.table.column_header_cell(
+                                                    "Quarter",
+                                                    style=table_header_style,
+                                                ),
+                                                rx.table.column_header_cell(
+                                                    "Standalone",
+                                                    style=table_header_style,
+                                                ),
+                                            ),
                                         ),
-                                    ),
-                                    rx.table.row(
-                                        rx.table.cell("2", style=table_cell_style),
-                                        rx.table.cell("Audited Financial 31st March 2025", style=table_cell_style),
-                                        rx.table.cell("2024-25", style=table_cell_style),
-                                        rx.table.cell(
-                                            rx.button(
-                                                "Download",
-                                                style=download_button_style,
-                                                on_click=rx.download(url="/obm.pdf"),
-                                            )
+                                        rx.table.body(
+                                            rx.table.row(
+                                                rx.table.cell("1", style=table_cell_style),
+                                                rx.table.cell("First Quarter", style=table_cell_style),
+                                                rx.table.cell(
+                                                    rx.button(
+                                                        "Download",
+                                                        style=download_button_style,
+                                                        on_click=rx.download(url="/bmo.pdf"),
+                                                    )
+                                                ),
+                                            ),
                                         ),
+                                        width="100%",
+                                        margin_bottom="2rem",
                                     ),
-                                    rx.table.row(
-                                        rx.table.cell("3", style=table_cell_style),
-                                        rx.table.cell("Annual Report", style=table_cell_style),
-                                        rx.table.cell("2023-24", style=table_cell_style),
-                                        rx.table.cell(
-                                            rx.button(
-                                                "Download",
-                                                style=download_button_style,
-                                                on_click=rx.download(url="/ar.pdf"),
-                                            )
-                                        ),
-                                    ),
+                                    value="fy2025",
                                 ),
+                                rx.tabs.content(
+                                    rx.table.root(
+                                        rx.table.header(
+                                            rx.table.row(
+                                                rx.table.column_header_cell(
+                                                    "S.No",
+                                                    style=table_header_style,
+                                                ),
+                                                rx.table.column_header_cell(
+                                                    "Document",
+                                                    style=table_header_style,
+                                                ),
+                                                rx.table.column_header_cell(
+                                                    "Download",
+                                                    style=table_header_style,
+                                                ),
+                                            ),
+                                        ),
+                                        rx.table.body(
+                                            rx.table.row(
+                                                rx.table.cell("1", style=table_cell_style),
+                                                rx.table.cell("Audited Financial 31st March 2025", style=table_cell_style),
+                                                rx.table.cell(
+                                                    rx.button(
+                                                        "Download",
+                                                        style=download_button_style,
+                                                        on_click=rx.download(url="/obm.pdf"),
+                                                    )
+                                                ),
+                                            ),
+                                        ),
+                                        width="100%",
+                                        margin_bottom="2rem",
+                                    ),
+                                    value="fy2024",
+                                ),
+                                rx.tabs.content(
+                                    rx.table.root(
+                                        rx.table.header(
+                                            rx.table.row(
+                                                rx.table.column_header_cell(
+                                                    "S.No",
+                                                    style=table_header_style,
+                                                ),
+                                                rx.table.column_header_cell(
+                                                    "Document",
+                                                    style=table_header_style,
+                                                ),
+                                                rx.table.column_header_cell(
+                                                    "Download",
+                                                    style=table_header_style,
+                                                ),
+                                            ),
+                                        ),
+                                        rx.table.body(
+                                            rx.table.row(
+                                                rx.table.cell("1", style=table_cell_style),
+                                                rx.table.cell("Annual Report", style=table_cell_style),
+                                                rx.table.cell(
+                                                    rx.button(
+                                                        "Download",
+                                                        style=download_button_style,
+                                                        on_click=rx.download(url="/ar.pdf"),
+                                                    )
+                                                ),
+                                            ),
+                                        ),
+                                        width="100%",
+                                        margin_bottom="2rem",
+                                    ),
+                                    value="fy2023",
+                                ),
+                                default_value="fy2025",
                                 width="100%",
-                                margin_bottom="2rem",
                             ),
                         ),
                         width="70vw",
@@ -139,71 +194,126 @@ def investor():
                 rx.box(
                     rx.vstack(
                         rx.text(
-                            "Welcome to our Investor Relations page. Here you can find our annual reports and financial documents.",
+                            "Welcome to our Investor Relations page. Here you can find our annual reports and financial documents organized by fiscal year.",
                             style=mobile_paragraph_style,
                             margin_bottom="1rem",
                         ),
-                        rx.table.root(
-                            rx.table.header(
-                                rx.table.row(
-                                    rx.table.column_header_cell(
-                                        "S.No",
-                                        style=table_header_style,
-                                    ),
-                                    rx.table.column_header_cell(
-                                        "Document",
-                                        style=table_header_style,
-                                    ),
-                                    rx.table.column_header_cell(
-                                        "Fiscal Year",
-                                        style=table_header_style,
-                                    ),
-                                    rx.table.column_header_cell(
-                                        "Download",
-                                        style=table_header_style,
-                                    ),
-                                ),
+                        rx.tabs.root(
+                            rx.tabs.list(
+                                rx.tabs.trigger("FY 2025-26", value="fy2025"),
+                                rx.tabs.trigger("FY 2024-25", value="fy2024"),
+                                rx.tabs.trigger("FY 2023-24", value="fy2023"),
                             ),
-                            rx.table.body(
-                                rx.table.row(
-                                    rx.table.cell("1", style=table_cell_style),
-                                    rx.table.cell("Q1 Board meeting AY 2025-2026", style=table_cell_style),
-                                    rx.table.cell("2025-26", style=table_cell_style),
-                                    rx.table.cell(
-                                        rx.button(
-                                            "Download",
-                                            style=download_button_style,
-                                            on_click=rx.download(url="/bmo.pdf"),
-                                        )
+                            rx.tabs.content(
+                                rx.table.root(
+                                    rx.table.header(
+                                        rx.table.row(
+                                            rx.table.column_header_cell(
+                                                "S.No.",
+                                                style=table_header_style,
+                                            ),
+                                            rx.table.column_header_cell(
+                                                "Quarter",
+                                                style=table_header_style,
+                                            ),
+                                            rx.table.column_header_cell(
+                                                "Standalone",
+                                                style=table_header_style,
+                                            ),
+                                        ),
                                     ),
-                                ),
-                                rx.table.row(
-                                    rx.table.cell("2", style=table_cell_style),
-                                    rx.table.cell("Audited Financial 31st March 2025", style=table_cell_style),
-                                    rx.table.cell("2024-25", style=table_cell_style),
-                                    rx.table.cell(
-                                        rx.button(
-                                            "Download",
-                                            style=download_button_style,
-                                            on_click=rx.download(url="/obm.pdf"),
-                                        )
+                                    rx.table.body(
+                                        rx.table.row(
+                                            rx.table.cell("1", style=table_cell_style),
+                                            rx.table.cell("First Quarter", style=table_cell_style),
+                                            rx.table.cell(
+                                                rx.button(
+                                                    "Download",
+                                                    style=download_button_style,
+                                                    on_click=rx.download(url="/bmo.pdf"),
+                                                )
+                                            ),
+                                        ),
                                     ),
+                                    width="100%",
+                                    margin_bottom="1rem",
                                 ),
-                                rx.table.row(
-                                    rx.table.cell("3", style=table_cell_style),
-                                    rx.table.cell("Annual Report", style=table_cell_style),
-                                    rx.table.cell("2023-24", style=table_cell_style),
-                                    rx.table.cell(
-                                        rx.button(
-                                            "Download",
-                                            style=download_button_style,
-                                            on_click=rx.download(url="/ar.pdf"),
-                                        )
-                                    ),
-                                ),
+                                value="fy2025",
                             ),
+                            rx.tabs.content(
+                                rx.table.root(
+                                    rx.table.header(
+                                        rx.table.row(
+                                            rx.table.column_header_cell(
+                                                "S.No",
+                                                style=table_header_style,
+                                            ),
+                                            rx.table.column_header_cell(
+                                                "Document",
+                                                style=table_header_style,
+                                            ),
+                                            rx.table.column_header_cell(
+                                                "Download",
+                                                style=table_header_style,
+                                            ),
+                                        ),
+                                    ),
+                                    rx.table.body(
+                                        rx.table.row(
+                                            rx.table.cell("1", style=table_cell_style),
+                                            rx.table.cell("Audited Financial 31st March 2025", style=table_cell_style),
+                                            rx.table.cell(
+                                                rx.button(
+                                                    "Download",
+                                                    style=download_button_style,
+                                                    on_click=rx.download(url="/obm.pdf"),
+                                                )
+                                            ),
+                                        ),
+                                    ),
+                                    width="100%",
+                                    margin_bottom="1rem",
+                                ),
+                                value="fy2024",
+                            ),
+                            rx.tabs.content(
+                                rx.table.root(
+                                    rx.table.header(
+                                        rx.table.row(
+                                            rx.table.column_header_cell(
+                                                "S.No",
+                                                style=table_header_style,
+                                            ),
+                                            rx.table.column_header_cell(
+                                                "Document",
+                                                style=table_header_style,
+                                            ),
+                                            rx.table.column_header_cell(
+                                                "Download",
+                                                style=table_header_style,
+                                            ),
+                                        ),
+                                    ),
+                                    rx.table.body(
+                                        rx.table.row(
+                                            rx.table.cell("1", style=table_cell_style),
+                                            rx.table.cell("Annual Report", style=table_cell_style),
+                                            rx.table.cell(
+                                                rx.button(
+                                                    "Download",
+                                                    style=download_button_style,
+                                                    on_click=rx.download(url="/ar.pdf"),
+                                                )
+                                            ),
+                                        ),
+                                    ),
+                                    width="100%",
+                                    margin_bottom="1rem",
+                                ),
+                                value="fy2023",
+                            ),
+                            default_value="fy2025",
                             width="100%",
-                            margin_bottom="1rem",
                         ),
                     ),
                     width="100%",
